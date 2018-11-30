@@ -5,7 +5,7 @@
 
 
 2. `$>docker search oracle`
-> 도커에서 오라클을 검색한다\
+> 도커에서 오라클을 검색한다 <br />
 
 3. `$>docker pull sath89/oracle-xe-llg`
 > 도커에서 sath89버전의 오라클을 다운로드 받는다
