@@ -25,9 +25,12 @@ Docker machine은 docker engine을 host에서 설치할수 있게하는 도구�
 
 - Windows 10 <br />
 `Docker for window` 설치후 `작업관리자` > `성능` > `가상화` 에서 설정을 맞춰준다
+<br />
 
-- Windows
-
+- Windows 10 보나 낮은사양 <br />
+Oracle Vitual Box-Linux Virtual Machine 을 기반으로 한 `Docker toolbox`가 필요하다. `Virtualization tool`가 있는지도 확인해본후 설치한다.
+<br />
+- 
 
 
 
