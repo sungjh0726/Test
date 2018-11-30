@@ -21,4 +21,4 @@
   6번에서 확인한 `mysql5`이 실행중이었기 때문에 start 대신 `exec`를 쓰고 `-it`를 사용해 interactive 한 환경에서 bash로 컨테이너를 실행시킨다
 
  8. `#mysql -u root -p`
-  실행된 mysql5내에 root계정안에서 (#으로 시작하는것으로 알수있다) `mysql`을 
+  실행된 mysql5내에 root계정안에서 (#으로 시작하는것으로 알수있다) `mysql`을 실행시킨다
