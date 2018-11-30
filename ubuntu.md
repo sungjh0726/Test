@@ -33,14 +33,14 @@ Vi editor로 설치된 telnet을 연다
 
 3. <br />
 > service telnet <br />
-> &nbsp;   { <br />
-> &nbsp;  disable = no <br />
-> &nbsp;  flags = REUSE <br />
-> &nbsp;  socket_type = stream <br />
-> &nbsp;  wait = no <br />
-> &nbsp;  user = root <br />
-> &nbsp;  server = /usr/sbin/in.telnetd <br />
-> &nbsp;  log_on_failure += USERID <br />
+> { <br />
+> &nbsp;&nbsp;&nbsp;&nbsp;disable = no <br />
+> &nbsp;&nbsp;&nbsp;&nbsp;flags = REUSE <br />
+> &nbsp;&nbsp;&nbsp;&nbsp;socket_type = stream <br />
+> &nbsp;&nbsp;&nbsp;&nbsp;wait = no <br />
+> &nbsp;&nbsp;&nbsp;&nbsp;user = root <br />
+> &nbsp;&nbsp;&nbsp;&nbsp;server = /usr/sbin/in.telnetd <br />
+> &nbsp;&nbsp;&nbsp;&nbsp;log_on_failure += USERID <br />
 > } <br />
 
 <br />
@@ -53,10 +53,15 @@ Vi editor로 설치된 telnet을 연다
 <br />
 
 5. `$>docker commit ub ub_telnet`<br />
-도커에 있는 기존의 `ub` `ub_telnet`
+도커에 있는 기존의 `ub`를  `ub_telnet`으로 바꾼후 `commit`(저장) 한다
 <br />
+
 6. `$>docker run -itd -p 23:23 --name ubt ub_telnet bash`<br />
+도커에서 `--name`뒤에 이름을 정하고 (ex. ubt) Telnet 포트넘버인 23으로 port forwarding 해주고, `-itd` (백그라운드) 에서 새로 업데이트된 `ub_telnet`으로 실행시킨다
 <br />
+
+
+
 
 
 
