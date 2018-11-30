@@ -18,7 +18,8 @@
 <br />
 <br />
 
-- ### MySQL  <br />
+- ### MySQL 
+<br />
 
 > User 생성 <br />
 
@@ -41,3 +42,15 @@
 설정된 권한을 확인해 
 <br />
 
+> Database 생성 <br />
+
+1. MySQL을 실행한다
+<br />
+
+2. `mysql>create database <db-name>;`<br />
+`database`에 이름을 부여함으로써 데이터 베이스를 생성시킨다  
+ <br /> 
+ 
+3. `mysql>show databases;`<br />
+모든 `database`들을 검색해서 본인이 설정한 `db_name`이 있다면 생성이 완료된 
+<br />
