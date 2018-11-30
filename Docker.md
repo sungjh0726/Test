@@ -13,11 +13,21 @@ Docker container는 image를 실행하게되면 생성된다. 이때 이 이미�
 
 Container는 software를 local computer내에서 고립된 상태로 만들어 주어 개발할때 staging상태에서 독립된 상태에서 개발할수 있도록 해준다. 
 <br />
+<br />
 
 > Docker machine <br />
 
 Docker machine은 docker engine을 host에서 설치할수 있게하는 도구이다. 이 도구를 이요하면 집이나 회사, 멀리떨어진 곳에서 docker실행이 가능하다.
 <br />
+<br />
+
+### Docker의 설치과정 <br />
+
+- Windows 10 <br />
+`Docker for window` 설치후 `작업관리자` > `성능` > `가상화` 에서 설정을 맞춰준다
+
+- Windows
+
 
 
 
