@@ -34,13 +34,13 @@ Vi editor로 설치된 telnet을 연다
 3. <br />
 > service telnet <br />
 > { <br />
-> &nbsp;&nbsp;&nbsp;&nbsp;disable = no <br />
-> &nbsp;&nbsp;&nbsp;&nbsp;flags = REUSE <br />
-> &nbsp;&nbsp;&nbsp;&nbsp;socket_type = stream <br />
-> &nbsp;&nbsp;&nbsp;&nbsp;wait = no <br />
-> &nbsp;&nbsp;&nbsp;&nbsp;user = root <br />
-> &nbsp;&nbsp;&nbsp;&nbsp;server = /usr/sbin/in.telnetd <br />
-> &nbsp;&nbsp;&nbsp;&nbsp;log_on_failure += USERID <br />
+> disable = no <br />
+> flags = REUSE <br />
+> socket_type = stream <br />
+> wait = no <br />
+> user = root <br />
+> server = /usr/sbin/in.telnetd <br />
+> log_on_failure += USERID <br />
 > } <br />
 
 <br />
@@ -61,6 +61,24 @@ Vi editor로 설치된 telnet을 연다
 <br />
 
 
+- ### 한글 사용 설정<br />
+
+1. `root`계정으로 접속한다<br />
+
+2. `$>locale`<br />
+<br />
+
+3. `$>locale -a`<br />
+<br />
+
+4. `$>apt-get install locales`<br />
+<br />
+
+5. `$>cat /usr/share/i18n/SUPPORTED`<br />
+<br />
+
+6. `$>localedef -f UTF-8 -i ko_KR ko_KR.UTF-8`<br />
+<br />
 
 
 
