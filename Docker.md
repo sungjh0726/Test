@@ -32,9 +32,12 @@ Oracle Vitual Box-Linux Virtual Machine 을 기반으로 한 `Docker toolbox`가
 <br />
 
 - Mac <br />
+
 1. `Docker.dmg`를 더블클릭하고 나온 고래모양을 `Applications`폴더에 drag한다
 <br />
+
 2. `Docker.app`을 더블클릭하면 실행된다
+
 <br />
 <br />
 
