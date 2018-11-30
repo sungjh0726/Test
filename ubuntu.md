@@ -32,16 +32,16 @@ Vi editor로 설치된 telnet을 연다
 <br />
 
 3. <br />
-> service telnet 
-> {
->    disable = no 
+> service telnet <br />
+> { <br />
+>    disable = no <br />
 >    flags = REUSE <br />
->    socket_type = stream 
->    wait = no
->    user = root
->    server = /usr/sbin/in.telnetd
->    log_on_failure += USERID
-> }
+>    socket_type = stream <br />
+>    wait = no <br />
+>    user = root <br />
+>    server = /usr/sbin/in.telnetd <br />
+>    log_on_failure += USERID <br />
+> } <br />
 
 <br />
 
