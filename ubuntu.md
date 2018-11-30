@@ -66,19 +66,25 @@ Vi editor로 설치된 telnet을 연다
 1. `root`계정으로 접속한다<br />
 
 2. `$>locale`<br />
+`locale`에서 현재 설정되어 있는 Language를 확인한다
 <br />
 
 3. `$>locale -a`<br />
+적용 가능한 모든 언어를 (`-a`)를 확인한후 `ko_KR.UTF-8`가 현재 없다면 한글 적용을 해야한다
 <br />
 
 4. `$>apt-get install locales`<br />
+`locales`를 설치한다
 <br />
 
 5. `$>cat /usr/share/i18n/SUPPORTED`<br />
+`cat`을 사용하여 설치된 `locales`를 읽어 어떤 언어들이 지원되는지 확인해본다
 <br />
 
 6. `$>localedef -f UTF-8 -i ko_KR ko_KR.UTF-8`<br />
+`locales`에서 지역을 한국으로 변환하고 (`ko_KR`) 언어를 한글로 지원받는다
 <br />
+
 
 
 
