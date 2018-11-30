@@ -80,6 +80,7 @@ Vi editor로 설치된 telnet을 연다
 
 11. 
 > `LC_ALL=ko_KR.UTF-8 bash
+<br />
 > export LANGUAGE=ko`
 
 위의 소스를 안에 추가한후 저장한다
