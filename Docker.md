@@ -30,7 +30,20 @@ Docker machine은 docker engine을 host에서 설치할수 있게하는 도구�
 - Windows 10 보나 낮은사양 <br />
 Oracle Vitual Box-Linux Virtual Machine 을 기반으로 한 `Docker toolbox`가 필요하다. `Virtualization tool`가 있는지도 확인해본후 설치한다.
 <br />
-- 
+
+- Mac <br />
+1. `Docker.dmg`를 더블클릭하고 나온 고래모양을 `Applications`폴더에 drag한다
+<br />
+2. `Docker.app`을 더블클릭하면 실행된다
+<br />
+<br />
+
+
+### Docker가 정상적으로 설치 되었는지 확인하는 방법 <br />
+
+`Docker Quick Starter`를 클릭하여 
+
+
 
 
 
