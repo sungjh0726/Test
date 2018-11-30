@@ -49,7 +49,9 @@ Vi editor로 설치된 telnet을 연다
 <br />
 
 4. `$> /etc/init.d/xinetd restart`<br />
+
 <br />
+
 5. `$>docker commit ub ub_telnet`<br />
 <br />
 6. `$>docker run -itd -p 23:23 --name ubt ub_telnet bash`<br />
