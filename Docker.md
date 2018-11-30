@@ -39,8 +39,6 @@ Oracle Vitual Box-Linux Virtual Machine 을 기반으로 한 `Docker toolbox`가
 2. `Docker.app`을 더블클릭하면 실행된다
 
 <br />
-<br />
-
 
 ### Docker가 정상적으로 설치 되었는지 확인하는 방법 <br />
 
