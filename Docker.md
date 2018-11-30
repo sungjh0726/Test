@@ -41,7 +41,9 @@ Oracle Vitual Box-Linux Virtual Machine 을 기반으로 한 `Docker toolbox`가
 
 ### Docker가 정상적으로 설치 되었는지 확인하는 방법 <br />
 
-`Docker Quick Starter`를 클릭하여 
+`Docker Quick Starter`를 클릭하여 실행시킨다
+
+
 
 
 
