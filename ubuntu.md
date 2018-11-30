@@ -34,14 +34,15 @@ Vi editor로 설치된 telnet을 연다
 3. <br />
  `service telnet
 {
-    disable = no
-    flags = REUSE
-    socket_type = stream
+    disable = no <br />
+    flags = REUSE <br />
+    socket_type = stream <br />
     wait = no
     user = root
     server = /usr/sbin/in.telnetd
     log_on_failure += USERID
 }`
+
 <br />
 
 위에 소스를 작성한후 `:wq`명령으로 저장하고 나온다
