@@ -79,13 +79,27 @@ Vi editor로 설치된 telnet을 연다
 10. 실행된 컨테이너의 `root`계정에서 `~/ .profile`을 읽는다<br />
 
 11. 
->> `LC_ALL=ko_KR.UTF-8 bash
->> export LANGUAGE=ko`<br />
+> `LC_ALL=ko_KR.UTF-8 bash
+> export LANGUAGE=ko`
+
 위의 소스를 안에 추가한후 저장한다
 
-12. 한글이 지원되는지 확
+12. 한글이 지원되는지 확인해본다
 
+- ### git사용 설정<br />
 
+1. 도커에서 사용하고자 하는 컨테이너를 실행시킨다 (root계정)<br />
+
+2. `#> apt-get install git`<br />
+`git`을 다운로드 받는다
+
+3. `#> git config --list`<br />
+`git`의 환경설정을 확인해본다
+
+4. `#> git config --global user.name <github-username>`<br />
+`#> git config --global user.email <email>`
+
+#> git clone <github-url>
 
 
 
