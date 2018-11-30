@@ -17,13 +17,12 @@
 1. MySQL을 실행한다
 <br />
 
-2. mysql>create user <user_name>@'host' identified by '<password>';<br />
-실행된 mysql창에서 `user_name`을 적고 현재 Local host이름을 적은후(ex. `%`) 비밀번호를 설정해   
+2. `mysql>create user <user_name>@'host' identified by '<password>';`<br />
+실행된 mysql창에서 `user_name`을 적고 현재 Local host이름을 적은후(ex. `%`) 비밀번호를 설정한다  
 <br /> 
 
-3. mysql>grant all privileges on <db>.* to '<user_name>'@'<host>';<br />
-  
- 
+3. `mysql>grant all privileges on <db>.* to '<user_name>'@'<host>';`<br />
+본인이 지정한  `db`의 이름을 적고 위에서 설정한 이름과 호스트 이름을 적게되면 지정된 `db`에게만 권한이 주어진다. 만약 `db`의 이름대신 `*`를 넣게되면 모든 db에게 권한이 부여된다
 <br />
 
 4. mysql>flush privileges;<br />
