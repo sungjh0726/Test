@@ -25,8 +25,19 @@ ubuntu를 도커에 설치한다
 
 1. `$>apt-get instal xinetd telnetd`
 2. `$>vi /etc/xinetd.d/telnet`
-3. `service telnet <br />`
+3. 
+```service telnet
+{
+    disable = no
+    flags = REUSE
+    socket_type = stream
+    wait = no
+    user = root
+    server = /usr/sbin/in.telnetd
+    log_on_failure += USERID
+}```
 
+4. `
 
 
 
