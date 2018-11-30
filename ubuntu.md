@@ -79,8 +79,8 @@ Vi editor로 설치된 telnet을 연다
 10. 실행된 컨테이너의 `root`계정에서 `~/ .profile`을 읽는다<br />
 
 11. 
-`LC_ALL=ko_KR.UTF-8 bash
-export LANGUAGE=ko`<br />
+>> `LC_ALL=ko_KR.UTF-8 bash
+>> export LANGUAGE=ko`<br />
 위의 소스를 안에 추가한후 저장한다
 
 12. 한글이 지원되는지 확
