@@ -23,10 +23,16 @@ ubuntu를 도커에 설치한다
 
 - ### Telnet daemon 구동하기 <br />
 
-1. `$>apt-get instal xinetd telnetd`
-2. `$>vi /etc/xinetd.d/telnet`
-3. 
-```service telnet
+1. `$>apt-get instal xinetd telnetd`<br />
+도커 실행후 `\bin\sh` 폴더에 telnet daemon을 설치한다
+<br />
+
+2. `$>vi /etc/xinetd.d/telnet`<br />
+Vi editor로 설치된 telnet을 연다
+<br />
+
+3. <br />
+ `service telnet
 {
     disable = no
     flags = REUSE
@@ -35,9 +41,18 @@ ubuntu를 도커에 설치한다
     user = root
     server = /usr/sbin/in.telnetd
     log_on_failure += USERID
-}```
+}`
+<br />
 
-4. `
+위에 소스를 작성한후 `:wq`명령으로 저장하고 나온다
+<br />
+
+4. `$> /etc/init.d/xinetd restart`<br />
+<br />
+5. `$>docker commit ub ub_telnet`<br />
+<br />
+6. `$>docker run -itd -p 23:23 --name ubt ub_telnet bash`<br />
+<br />
 
 
 
