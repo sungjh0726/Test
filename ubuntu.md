@@ -34,7 +34,7 @@ Vi editor로 설치된 telnet을 연다
 3. <br />
 > service telnet <br />
 > { <br />
->&nbsp;disable = no <br />
+> &nbsp; disable = no <br />
 >    flags = REUSE <br />
 >    socket_type = stream <br />
 >    wait = no <br />
