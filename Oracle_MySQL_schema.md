@@ -52,5 +52,5 @@
  <br /> 
  
 3. `mysql>show databases;`<br />
-모든 `database`들을 검색해서 본인이 설정한 `db_name`이 있다면 생성이 완료된 
+모든 `database`들을 검색해서 본인이 설정한 `db_name`이 있다면 생성이 완료된 것으로 확인할수 
 <br />
