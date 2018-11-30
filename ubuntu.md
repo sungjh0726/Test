@@ -80,7 +80,6 @@ Vi editor로 설치된 telnet을 연다
 
 11. 
 > `LC_ALL=ko_KR.UTF-8 bash
-<br />
 > export LANGUAGE=ko`
 
 위의 소스를 안에 추가한후 저장한다
@@ -98,9 +97,17 @@ Vi editor로 설치된 telnet을 연다
 `git`의 환경설정을 확인해본다
 
 4. `#> git config --global user.name <github-username>`<br />
-`#> git config --global user.email <email>`
+`#> git config --global user.email <email>`<br />
+`git`에서 전역으로(`global`) 쓰일 이름과 이메일주소를 설정해준다
 
-#> git clone <github-url>
+5. `#> git clone <github-url>` <br />
+쓰고자 하는 github 주소를 적어 클론받는다
+
+6. `#>git add --all`<br />
+`#>git commit -am "comment"`<br />
+`#>git push` <br />
+
+위와 같은 방법을 이용하여 github에 공유한다
 
 
 
