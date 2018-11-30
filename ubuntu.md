@@ -18,10 +18,15 @@ ubuntu를 도커에 설치한다
 <br />
 
 5. `$>docker container start ubuntu container`<br />
-다시 실행할때는 컨테이너 이름을 적고 실행시킨다
-<br />
+다시 실행할때는 지정한 이름을 적고 실행시킨다
 <br />
 
 - ### Telnet daemon 구동하기 <br />
+
+1. `$>apt-get instal xinetd telnetd`
+2. `$>vi /etc/xinetd.d/telnet`
+3. `service telnet <br />`
+
+
 
 
