@@ -26,10 +26,10 @@
 <br />
 
 4. mysql>flush privileges;<br />
-
+주어진 권한을 적용시킨다
 <br />
 
 5. mysql>show grants for '<user_name>'@'<host>;<br />
-
+설정된 권한을 확인해 
 <br />
 
