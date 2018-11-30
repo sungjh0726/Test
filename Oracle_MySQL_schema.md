@@ -34,11 +34,11 @@
 본인이 지정한  `db`의 이름을 적고 위에서 설정한 이름과 호스트 이름을 적게되면 지정된 `db`에게만 권한이 주어진다. 만약 `db`의 이름대신 `*`를 넣게되면 모든 db에게 권한이 부여된다
 <br />
 
-4. mysql>flush privileges;<br />
+4. `mysql>flush privileges;`<br />
 주어진 권한을 적용시킨다
 <br />
 
-5. mysql>show grants for '<user_name>'@'<host>;<br />
+5. `mysql>show grants for '<user_name>'@'<host>;`<br />
 설정된 권한을 확인해 
 <br />
 
