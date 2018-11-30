@@ -6,9 +6,17 @@
 > User 생성<br />
 
 1. SQL Developer를 실행한다
+<br />
+
 2. 메뉴에 `접속`을 누른다
+<br />
+
 3. `다른사용자`를 누른다
+<br />
+
 4. `사용자생성`을 누르고 사용자 이름, role 및 권한(read, write, execute), 할당량(정해진 용량내에서 얼마나 차지할것인지), SQL(DDL, DML etc.) 그리고 결과를 설정한후 저장한다.
+<br />
+<br />
 
 - ### MySQL  <br />
 
