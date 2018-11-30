@@ -6,6 +6,8 @@ Docker는 computing environment가 여러가 필요할때 여러대의 컴퓨터
 뛰어난 프로그램이다. Docker의 구성요소는 대표적으로 image, container 그리고 Docker machine 등이 있다.
 <br />
 
-> Docker Image <br />
+> Docker Image and  container <br />
 
-도커 컨테이너는 이미지를 실행하게되면 생성된다. 이때 이 이미지는 컴퓨터만 해석 가능한 `Byte`코드로 저장되어 있으므로 OS기반이나 infrastructure와는 상관없이 빠르게 실행이 가능하며
+Docker container는 image를 실행하게되면 생성된다. 이때 이 이미지는 컴퓨터만 해석 가능한 `Byte`코드로 저장되어 있으므로 OS기반이나 infrastructure와는 상관없이 빠르게 실행이 가능하며 container의 손실시 다시 image만 docker engine에 실행시키게 되면 얼마든지 작업중인 container를 복구가 가능하다는 큰 장점이 있다. Container는 software를 local computer내에서 고립된 상태로 만들어 주어 개발할때 staging상태에서 독립된 상태에서 개발할수 있도록 해준다. 
+<br />
+
