@@ -34,7 +34,7 @@ Vi editor로 설치된 telnet을 연다
 3. <br />
 > service telnet <br />
 > { <br />
->    disable = no <br />
+>&nbsp;disable = no <br />
 >    flags = REUSE <br />
 >    socket_type = stream <br />
 >    wait = no <br />
@@ -49,10 +49,11 @@ Vi editor로 설치된 telnet을 연다
 <br />
 
 4. `$> /etc/init.d/xinetd restart`<br />
-
+저장한 내용을 적용하기 위해 다시 시작한다
 <br />
 
 5. `$>docker commit ub ub_telnet`<br />
+도커에 있는 기존의 `ub` `ub_telnet`
 <br />
 6. `$>docker run -itd -p 23:23 --name ubt ub_telnet bash`<br />
 <br />
