@@ -68,9 +68,6 @@ Vi editor로 설치된 telnet을 연다
 6. `$>localedef -f UTF-8 -i ko_KR ko_KR.UTF-8`<br />
 `locales`에서 지역을 한국으로 변환하고 (`ko_KR`) 언어를 한글로 지원받는다
 
-7. `$>locale-gen ko_KR.UTF-8`<br />
-`locale`에서 한글을 생성한다
-
 8. `$>locale -a`<br />
 다시 지원되는 모든 language목록을 확인하여 `ko_KR.UTF-8`이 뜨는지 확인한다
 
