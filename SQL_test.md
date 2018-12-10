@@ -1,7 +1,7 @@
 
 # Test 10.DEC.2018
 
-1. [DDL for creating table Student, Subject, Prof, Enrol](https://github.com/ef10007/Test/blob/master)
+1. [DDL for creating table Student, Subject, Prof and Enrol](https://github.com/ef10007/Test/blob/master)
 
 2. [DML for inserting data into Enrol table](https://github.com/ef10007/Test/blob/master)
 
