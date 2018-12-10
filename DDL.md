@@ -10,5 +10,5 @@
   regdt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP, <br />
 ); <br /> `
 
- creating Student table
+ -- creating Student table
 
