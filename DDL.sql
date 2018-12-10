@@ -1,3 +1,4 @@
+## 1. Student Table
 
 CREATE TABLE `Student` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '학번',
