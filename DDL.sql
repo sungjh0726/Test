@@ -38,3 +38,22 @@ show index from Prof;
 select * from Prof;
 
 -- Check if Student Prof is correctly created
+
+
+3. Subject table
+
+create table Subject(
+	id smallint unsigned not null auto_increment primary key,
+  name varchar(31) not null,
+  prof smallint unsigned,
+  constraint foreign key fk_prof(prof) references Prof(id) on delete set 
+ );
+
+-- Creating Subject table
+
+desc Subject;
+show table status ;
+show index from Subject;
+select * from Subject;
+
+-- Creating Subject table
