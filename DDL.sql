@@ -11,9 +11,11 @@ CREATE TABLE `Student` (
   KEY `index_Students_tel` (`tel`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
+-- Creating Student  table
 
-select * from Student;
 desc Student;
-
 show table status ;
 show index from Student;
+select * from Student;
+
+-- Check if Student table is correctly created
