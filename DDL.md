@@ -1,7 +1,7 @@
 * Creating Student table
 
-`CREATE TABLE Student ( <br>
-  id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, <br />
+`CREATE TABLE Student ( <br />  
+  id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, <br /> 
   name varchar(32) NOT NULL, <br />
   addr varchar(30) NOT NULL, <br />
   birth varchar(8) NOT NULL, <br />
