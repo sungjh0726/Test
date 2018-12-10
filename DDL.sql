@@ -68,5 +68,5 @@ desc Enrol;
 show table status ;
 show index from Enrol;
 select * from Enrol;
--- Check if Subject is correctly created
+-- Check if Enrol is correctly created
 
