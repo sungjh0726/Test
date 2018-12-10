@@ -1,6 +1,6 @@
 * Creating Student table
 
-`CREATE TABLE Student (
+`CREATE TABLE Student ( /
   id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   name varchar(32) NOT NULL,
   addr varchar(30) NOT NULL,
