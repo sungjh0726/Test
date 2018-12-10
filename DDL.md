@@ -1,14 +1,14 @@
 * Creating Student table
 
-CREATE TABLE Student ( 
-  id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  name varchar(32) NOT NULL,
-  addr varchar(30) NOT NULL,
-  birth varchar(8) NOT NULL,
-  tel varchar(15) NOT NULL,
-  email varchar(31) NOT NULL,
-  regdt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-);
+`CREATE TABLE Student ( <br />
+  id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, <br />
+  name varchar(32) NOT NULL, <br />
+  addr varchar(30) NOT NULL, <br />
+  birth varchar(8) NOT NULL, <br />
+  tel varchar(15) NOT NULL, <br />
+  email varchar(31) NOT NULL, <br />
+  regdt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP, <br />
+); <br /> `
 
-` creating Student table`
+ creating Student table
 
