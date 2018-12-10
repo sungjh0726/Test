@@ -68,4 +68,13 @@ create table Enrol(
 	constraint foreign key fk_student(student) references Student(id) on delete cascade
 );
 
--- Creating Enrol table, subject column is a foreign key connected with id value in Subject table on cascade key and student column is a foreign key connected with id value in Student table on cascade key.
+-- Creating Enrol table, subject column is a foreign key connected with id value in Subject table on cascade key and
+-- student column is a foreign key connected with id value in Student table on cascade key.
+
+desc Enrol;
+show table status ;
+show index from Enrol;
+select * from Enrol;
+
+-- Check if Subject is correctly created
+
