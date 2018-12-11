@@ -3,7 +3,7 @@
 
 1. [DDL for creating table Student, Subject, Prof and Enrol](https://github.com/ef10007/Test/blob/master/DDL.sql)
 
-2. [DML for inserting data into Enrol table](https://github.com/ef10007/Test/blob/master)
+2. [DML for inserting data into Enrol table](https://github.com/ef10007/Test/blob/master/DML.sql)
 
 3. [Creating ClubMember table](https://github.com/ef10007/Test/blob/master/ClubMember_table.sql)
 
