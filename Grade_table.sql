@@ -72,7 +72,7 @@ order by 1;
 
 select * from report11;
 
--- REPORT 2 = 과목, 과목의 평균점수, 총 학생수, 최고 득점자,
+-- REPORT 2 = 과목, 과목의 평균점수, 수강생수,
 -- order by 과목 가나다순 정렬
 
 select sub1.과목명, (sub1.과목평균총점 / sub1.수강생수) as '과목평균', sub1.수강생수
@@ -80,8 +80,21 @@ select sub1.과목명, (sub1.과목평균총점 / sub1.수강생수) as '과목�
 select 과목명, round(sum(평균) , 1) as '과목평균총점', count(*) as '수강생수'
   from report11
 group by 과목명
-) sub1
+) sub1;
 
+
+-- REPORT 3 = 학생명, 과목수, 총점, 평균(평균 100점), 평점(ABCDF)
+
+select *, (case when report1.평균 = 100 then 'A+'
+		when report1.평균 >= 90 then 'A'
+		when report1.평균 >= 80 then 'B'
+                when report1.평균 >= 70 then 'C'
+                when report1.평균 >= 60 then 'D'
+                else 'F' end) as '평점'
+from
+(
+select 학생명, count(*) '과목수', sum(총점) as '총점', round(avg(평균), 1) as '평균' from report11 group by 학생명
+) report1;
 
 
 
