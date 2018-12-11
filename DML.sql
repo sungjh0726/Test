@@ -10,7 +10,11 @@ desc Enrol;
 select * from Enrol;
 -- creating Enrol table
 
-
 insert into Enrol(subject, student) select 1, sd.id from Student sd order by rand() on duplicate key update student=student;
+-- 
+
 update Enrol set student = (select sd.id from Student sd order by rand() limit 1) where id !=0;
 select count(distinct student) from Enrol;
+-- 
+
+
