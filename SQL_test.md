@@ -7,7 +7,7 @@
 
 3. [Creating ClubMember table](https://github.com/ef10007/Test/blob/master/ClubMember_table.sql)
 
-4. [Creating Dept table](https://github.com/ef10007/Test/blob/master)
+4. [Creating Dept table](https://github.com/ef10007/Test/blob/master/Dept.sql)
 
 5. [Creating Classroom table](https://github.com/ef10007/Test/blob/master)
 
