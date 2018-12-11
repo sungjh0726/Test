@@ -11,4 +11,4 @@
 
 5. [Creating Classroom table](https://github.com/ef10007/Test/blob/master)
 
-6. [Creating Grade table - Group project](https://github.com/ef10007/Test/blob/master)
+6. [Creating Grade table - Group project](https://github.com/ef10007/Test/blob/master/Grade_table.sql)
