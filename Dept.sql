@@ -26,3 +26,8 @@ alter table Student add constraint foreign key fk_dept(dept) references Dept(id)
 update Student set dept = (select id from Dept order by rand() limit 1);
 select * from Student;
 -- altering Student table and updating dept column values randomly from Dept id
+
+update Dept d set student = (select id from Student where dept = d.id order by rand() limit 1);
+-- allocating '과대표' to each subject's name in Dept table
+
+
