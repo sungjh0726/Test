@@ -9,6 +9,6 @@
 
 4. [Creating Dept table](https://github.com/ef10007/Test/blob/master/Dept.sql)
 
-5. [Creating Classroom table](https://github.com/ef10007/Test/blob/master)
+5. [Creating Classroom table](https://github.com/ef10007/Test/blob/master/Classroom_table.sql)
 
 6. [Creating Grade table - Group project](https://github.com/ef10007/Test/blob/master/Grade_table.sql)
