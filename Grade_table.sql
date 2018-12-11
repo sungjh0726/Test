@@ -2,6 +2,8 @@
 
 start transaction;
 
+1. 수강하는 과목별 중간고사, 기말고사 성적을 저장하는 테이블(Grade)
+
 -- 성적테이블(Grade) 만들기
 
 create table Grade(
@@ -16,6 +18,7 @@ desc Grade;
 show create table Grade;
 select * from Grade;
 
+2) 수강테이블 기준으로 샘플 데이터를 중간(midterm), 기말(finalterm) 성적(100점 만점)으로 구성
 
 -- 중간고사 기말고사 점수를 sample로 채우기
 
@@ -28,7 +31,7 @@ update Grade set finalterm = ceil((0.5 + rand() / 2) * 100) where id > 0;
 
 select * from Grade;
 
--- 과목명, 학생명, 중간고사, 기말고사, 총점, 평균 생성
+3) 과목명, 학생명, 중간고사, 기말고사, 총점, 평균, 학점 생성 SQL
 
 select sub.과목명, sub.학생명, g.midterm as '중간', g.finalterm as '기말', (g.midterm + g.finalterm) as '총점',
 ((g.midterm + g.finalterm) /2) as '평균'
@@ -44,7 +47,6 @@ on g.enroll = sub.id;
 --              inner join Student stu on e.student = stu.id
 --              inner join Subject sbj on e.subject = sbj.id
 --) sub;
-
 
 
 -- View report1 생성
@@ -72,8 +74,7 @@ order by 1;
 
 select * from report11;
 
--- REPORT 2 = 과목, 과목의 평균점수, 수강생수,
--- order by 과목 가나다순 정렬
+4) 과목, 과목의 평균점수, 수강생수, order by 과목 가나다순 정렬
 
 select sub1.과목명, (sub1.과목평균총점 / sub1.수강생수) as '과목평균', sub1.수강생수
   from(
@@ -83,7 +84,7 @@ group by 과목명
 ) sub1;
 
 
--- REPORT 3 = 학생명, 과목수, 총점, 평균(평균 100점), 평점(ABCDF)
+5)  학생명, 과목수, 총점, 평균(평균 100점), 평점(ABCDF) SQL
 
 select *, (case when report1.평균 = 100 then 'A+'
 		when report1.평균 >= 90 then 'A'
