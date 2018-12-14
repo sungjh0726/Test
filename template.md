@@ -7,6 +7,7 @@ A database view is a virtual table or logical table which is defined as a SQL SE
 Tables dependency: you create a view based on underlying tables of the database. Whenever you change the structure of these tables that view associated with, you have to change the view as well.
 
 - trigger
+
 trigger is a stored program executed automatically to respond to a specific event e.g.,  insert, update or delete occurred in a table.
 The database trigger is powerful tool for protecting the integrity of the data in your MySQL databases. 
 A SQL trigger is a special type of stored procedure. It is special because it is not called directly like a stored procedure. The main difference between a trigger and a stored procedure is that a trigger is called automatically when a data modification event is made against a table whereas a stored procedure must be called explicitly.
