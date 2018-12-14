@@ -23,4 +23,6 @@ A SQL trigger is a special type of stored procedure. It is special because it is
 
 - procedure
 
-To invoke a stored procedure, use the CALL statement.
+To invoke a stored procedure, use the CALL statement. A stored procedure is a segment of declarative SQL statements stored inside the database catalog. A stored procedure can be invoked by triggers, other stored procedures, and applications such as Java, Python, PHP.
+1. help increase the performance of the applications
+2. reduce the traffic between application and database server because instead of sending multiple lengthy SQL statements, the application has to send only the name and parameters of the stored procedure
