@@ -11,9 +11,16 @@ Tables dependency: you create a view based on underlying tables of the database.
 trigger is a stored program executed automatically to respond to a specific event e.g.,  insert, update or delete occurred in a table.
 The database trigger is powerful tool for protecting the integrity of the data in your MySQL databases. 
 A SQL trigger is a special type of stored procedure. It is special because it is not called directly like a stored procedure. The main difference between a trigger and a stored procedure is that a trigger is called automatically when a data modification event is made against a table whereas a stored procedure must be called explicitly.
-
-
-
+1. provide an alternative way to check the integrity of data.
+2. provide an alternative way to run scheduled tasks. By using SQL triggers, you don’t have to wait to run the scheduled tasks because the triggers are invoked automatically before or after a change is made to the data in the tables.
 
 - function
+
+ To invoke a stored function, refer to it in an expression. The function returns a value during expression evaluation. 
+ 1. aggregate functions (AVG, SUM, COUNT, etc.)
+ 2. string functions (CONCAT, SUBSTRING, FORMAT, etc.)
+ 3. control flow functions (CASE, IF, etc.)
+
 - procedure
+
+To invoke a stored procedure, use the CALL statement.
