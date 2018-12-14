@@ -1,5 +1,0 @@
-
-view
-function
-procedure
-trigger
