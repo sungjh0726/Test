@@ -10,4 +10,4 @@
 
 5. [Oracle 'Marketing']()
 
-6. [Cursor]()
+6. [Cursor](https://github.com/ef10007/Test/blob/master/team_cursor.sql)
