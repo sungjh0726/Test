@@ -1,6 +1,6 @@
 # Test 18.DEC.2018
 
-1. [Creating View v_grade_subject_average]()
+1. [Creating View v_grade_subject_average](https://github.com/ef10007/Test/blob/master/Creating_View.sql)
 
 2. [Stored function for finding_average]()
 
