@@ -4,7 +4,7 @@
 
 2. [Stored function](https://github.com/ef10007/Test/blob/master/function_average.sql)
 
-3. [Creating Trigger]()
+3. [Creating Trigger](https://github.com/ef10007/Test/blob/master/trigger.sql)
 
 4. [Stored Procedure]()
 
