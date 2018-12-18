@@ -8,6 +8,6 @@
 
 4. [Stored Procedure]()
 
-5. [Oracle 'Marketing']()
+5. [Oracle 'Marketing'](https://github.com/ef10007/Test/blob/master/Marketing_depart.sql)
 
 6. [Cursor](https://github.com/ef10007/Test/blob/master/team_cursor.sql)
