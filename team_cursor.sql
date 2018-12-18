@@ -3,40 +3,39 @@ drop procedure if exists sp_subject_ranking;
 delimiter //
 
 create procedure sp_subject_ranking()
-	begin
-		declare _isdone boolean default false;
+begin
+	declare _isdone boolean default false;
         declare _subject varchar(31); 
         declare _student varchar(45); 
         declare _avr varchar(45);
         declare local_i smallint default 7;
         
-                
         declare cursor_1 cursor
-			for select * from T_table0;
+	for select * from T_table0;
 		
         declare continue handler 
-			for not found set _isdone = True;
+	for not found set _isdone = True;
 
-		drop table if exists T_table0;
+	drop table if exists T_table0;
         create temporary table T_table0(
-			subject varchar(31),
-			student varchar(45),
-			avr varchar(45)
-			);
+	       subject varchar(31),
+	       student varchar(45),
+	       avr varchar(45)
+	       );
 
-		drop table if exists T_table1;
-        create temporary table T_table1(
-			subject varchar(31),
-            student1 varchar(31),
-            score1 varchar(31),
-            student2 varchar(31),
-            score2 varchar(31),
-            student3 varchar(31),
-            score3 varchar(31)
-            );
+	 drop table if exists T_table1;
+         create temporary table T_table1(
+	        subject varchar(31),
+                student1 varchar(31),
+                score1 varchar(31),
+                student2 varchar(31),
+                score2 varchar(31),
+                student3 varchar(31),
+                score3 varchar(31)
+                );
             
 
-		while (local_i <= 16) do
+	while (local_i <= 16) do
 			insert into T_table0(subject, student, avr)
             select max(sub.subject), group_concat(sub.student) as student, group_concat(sub.avr) as avr
             from (select sbj.name as subject, stu.name as student, vge.avr as avr
