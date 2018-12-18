@@ -10,4 +10,4 @@
 
 5. [Oracle 'Marketing']()
 
-6. [Team project]()
+6. [Cursor]()
