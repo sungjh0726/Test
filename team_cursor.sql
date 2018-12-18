@@ -49,7 +49,6 @@ begin
 	select * from T_table0;
         
         open cursor_1;
-            
 	loop1 : loop
                 
 	fetch cursor_1 into _subject, _student, _avr;
@@ -66,7 +65,6 @@ begin
 				
                 
         end loop loop1;
-            
         close cursor_1;
         
         select * from T_table1;
