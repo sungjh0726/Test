@@ -8,7 +8,7 @@ begin
         declare _subject varchar(31); 
         declare _student varchar(45); 
         declare _avr varchar(45);
-        declare local_i smallint default 7;
+        declare local_i smallint default 1;
         
         declare cursor_1 cursor
 	for select * from T_table0;
@@ -35,7 +35,7 @@ begin
          );
             
 
-	while (local_i <= 16) do
+	while (local_i <= 10) do
 	insert into T_table0(subject, student, avr)
         select max(sub.subject), group_concat(sub.student) as student, group_concat(sub.avr) as avr
         from (select sbj.name as subject, stu.name as student, vge.avr as avr
