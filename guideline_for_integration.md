@@ -44,11 +44,11 @@ Mysql에 DB작성 표준 지침을 기준해서 오라클의 Schema를 전환한
 |department_name | varchar(45)| Not null |  null  |
 |  manager_id    |     int    |   null   |    0   |
 
+- create table job
 
-
-
-
-DEPARTMENT_ID	NUMBER(4,0)	No		1
-DEPARTMENT_NAME	VARCHAR2(30 BYTE)	No		2
-MANAGER_ID	NUMBER(6,0)	Yes		3
-LOCATION_ID	NUMBER(4,0)	Yes		4
+|   column name  | data type  | Nullable | Default|
+|:--------------:|:----------:|:--------:|:------:|
+|    job_id      | varchar(45)| Not null |  null  |
+|   job_title    | varchar(45)| Not null |  null  |
+|   min_salary   |     int    |   null   |    0   |
+|   max_salary   |     int    |   null   |    0   |
