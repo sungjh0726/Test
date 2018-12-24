@@ -21,19 +21,19 @@ Mysql에 DB작성 표준 지침을 기준해서 오라클의 Schema를 전환한
 16. Nullable 유무는 주어진 그대로 따른다.
 
 - create table Employee
-   |id | column name  | data type | Nullable | Default |
-   | --- | ----------- |-----------|----------|---------|
-   | 1 |  employee_id |    int    | Not null |    0    |
-   | 2 |  first_name  |varchar(45)|   null   |   null  |
-   | 3 |  last_name   |varchar(45)| Not null |   null  |
-   | 4 |    email     |varchar(45)| Not null |   null  |
-   | 5 |     tel      |varchar(45)|   null   |   null  |
-   | 6 |  hire_date   |  datetime | Not null |    *    |
-   | 7 |     job      |varchar(45)| Not null |   null  |
-   | 8 |    salary    |    int    |   null   |    0    |
-   | 9 |commission_pct|    int    |   null   |    0    |
-   | 10|  manager_id  |    int    |   null   |    0    |
-   | 11|  department  |    int    |   null   |    0    |
+   |id   | column name  | data type | Nullable | Default |
+   | --- |  ----------- | --------- | -------- | ------- |
+   | 1   |  employee_id |    int    | Not null |    0    |
+   | 2   |  first_name  |varchar(45)|   null   |   null  |
+   | 3   |  last_name   |varchar(45)| Not null |   null  |
+   | 4   |    email     |varchar(45)| Not null |   null  |
+   | 5   |     tel      |varchar(45)|   null   |   null  |
+   | 6   |  hire_date   |  datetime | Not null |    *    |
+   | 7   |     job      |varchar(45)| Not null |   null  |
+   | 8   |    salary    |    int    |   null   |    0    |
+   | 9   |commission_pct|    int    |   null   |    0    |
+   | 10  |  manager_id  |    int    |   null   |    0    |
+   | 11  |  department  |    int    |   null   |    0    |
 
 
 | column name   | Are           | Cool  |
