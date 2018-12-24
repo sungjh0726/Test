@@ -17,8 +17,6 @@ create table Department (
    manager_id int default 0,
    primary key(id)
 );
-alter table Department add constraint f_manager_id_employee_id foreign key (manager_id) references Employee(id);
-
 
 create table Employee (
    id int default 0 not null,
@@ -47,6 +45,9 @@ create table JobHistory (
    department int default 0,
    primary key(employee, start_date)
 );
+
+alter table Department add constraint f_manager_id_employee_id foreign key (manager_id) references Employee(id);
+
 alter table JobHistory add constraint f_employee_id foreign key (employee) references Employee(id);
 alter table JobHistory add constraint f_jobhistory_job_id foreign key (job) references Job(id);
 alter table JobHistory add constraint f_jobhistory_department_id foreign key (department) references Department(id);
