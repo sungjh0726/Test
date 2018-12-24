@@ -51,3 +51,20 @@ alter table Department add constraint f_manager_id_employee_id foreign key (mana
 alter table JobHistory add constraint f_employee_id foreign key (employee) references Employee(id);
 alter table JobHistory add constraint f_jobhistory_job_id foreign key (job) references Job(id);
 alter table JobHistory add constraint f_jobhistory_department_id foreign key (department) references Department(id);
+
+
+show index from Employee;
+desc Employee;
+select * from Employee;
+
+show index from Job;
+desc Job;
+select * from Job;
+
+show index from JobHistory;
+desc JobHistory;
+select * from JobHistory;
+
+show index from Department;
+desc Department;
+select * from Department;
