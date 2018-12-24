@@ -26,11 +26,11 @@ Mysql에 DB작성 표준 지침을 기준해서 오라클의 Schema를 전환한
 |:------------:|:----------:|:--------:|:------:|
 |  employee_id |    int     | Not null |   0    |
 |  first_name  | varchar(45)|   null   |  null  |
-|  last_name   | varchar(45)| Not null |  null  |
-|    email     | varchar(45)| Not null |  null  |
+|  last_name   | varchar(45)| Not null |        |
+|    email     | varchar(45)| Not null |        |
 |     tel      | varchar(45)|   null   |  null  |
 |  hire_date   |   datetime | Not null |   *    |
-|     job      | varchar(45)| Not null |  null  |
+|     job      | varchar(45)| Not null |        |
 |    salary    |     int    |   null   |   0    |
 |commission_pct|     int    |   null   |   0    |
 |  manager_id  |     int    |   null   |   0    |
@@ -40,27 +40,27 @@ Mysql에 DB작성 표준 지침을 기준해서 오라클의 Schema를 전환한
 
 |   column name  | data type  | Nullable | Default|
 |:--------------:|:----------:|:--------:|:------:|
-|department_id   |    int     | Not null |   0    |
-|department_name | varchar(45)| Not null |  null  |
+|department_id   |    int     | Not null |        |
+|department_name | varchar(45)| Not null |        |
 |  manager_id    |     int    |   null   |    0   |
 
 - create table job
 
 |   column name  | data type  | Nullable | Default|
 |:--------------:|:----------:|:--------:|:------:|
-|    job_id      | varchar(45)| Not null |  null  |
-|   job_title    | varchar(45)| Not null |  null  |
+|    job_id      | varchar(45)| Not null |        |
+|   job_title    | varchar(45)| Not null |        |
 |   min_salary   |     int    |   null   |    0   |
 |   max_salary   |     int    |   null   |    0   |
 
 
 - create table job history
 
-|   column name  | data type  | Nullable | Default|
-|:--------------:|:----------:|:--------:|:------:|
-|   employee_id  |     int    | Not null |  null  |
-|   start_date   | varchar(45)| Not null |  null  |
-|   min_salary   |     int    |   null   |    0   |
-|   max_salary   |     int    |   null   |    0   |
-
+|   column name | data type  | Nullable | Default|
+|:-------------:|:----------:|:--------:|:------:|
+|   employee_id |     int    | Not null |        |
+|   start_date  |  datetime  | Not null |        |
+|    end_date   |   datetime | Not null |        |
+|    job_id     | varchar(45)| Not null |        |
+| department_id |     int    |   null   |    0   |
 
