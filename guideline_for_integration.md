@@ -36,12 +36,12 @@ create table Employee
    | 11  |  department  |    int    |   null   |    0    |
 
 
-| column name   | data type  | Nullable|
-| ------------- |:----------:| -------:|
-|  employee_id  |    int     | $1600 |
-|  first_name   | varchar(45)|   $12 |
-|  last_name    | varchar(45)|    $1 |
-|    email      | varchar(45)|    $1 |
+| column name   | data type  | Nullable| Default |
+| ------------- |:----------:|:-------:|:--------:|
+|  employee_id  |    int     | Not null|
+|  first_name   | varchar(45)|   null  |
+|  last_name    | varchar(45)| Not null|
+|    email      | varchar(45)| Not null|
 
 DEPARTMENT_ID	NUMBER(4,0)	No		1
 DEPARTMENT_NAME	VARCHAR2(30 BYTE)	No		2
