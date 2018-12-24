@@ -16,11 +16,6 @@ If you’re capturing data from a web form, for example, you want to know what d
 ## Step 3: Choosing Data Standards
 What type of data should be normalised? Data categories that describe the buyer persona or impact business processes are the best candidates for normalisation. Translating unrefined data into a standardised list gives you the ability to take actions that otherwise would be difficult or impossible to do properly. For example, data such as job title, industry, state, country, or platforms/technologies impact lead scoring and nurture messaging, so accuracy and consistency are vital. Some common choices for normalisation are job titles, locations, and addresses.
 
-## Step 4: Defining the Normalisation Matrix
-A normalisation matrix maps dirty data to your new standard data values. Start with a value that’s important to your organisation, such as job title. Identify job levels for the different job title values, and then refine the title-to-level interpretations.
-
-Once your normalisation matrix is created, run it against your data. Once you’ve got the matrix, you need a data normalization program in the marketing automation system. Essentially, this is the brain that compares the entry data to the final result.
-
 
 ## Data Standardisation Use Cases
 There are two main use case categories in Data Standardisation: Source-to-Target Mapping, and Complex Reconciliation. We typically divide the former into two sub-categories thereby arriving at three use cases:
