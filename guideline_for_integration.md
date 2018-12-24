@@ -22,6 +22,7 @@ Mysql에 DB작성 표준 지침을 기준해서 오라클의 Schema를 전환한
 
 - create table Employee
    |id | column name  | data type | Nullable | Default |
+   |---|--------------|-----------|----------|---------|
    | 1 |  employee_id |    int    | Not null |    0    |
    | 2 |  first_name  |varchar(45)|   null   |   null  |
    | 3 |  last_name   |varchar(45)| Not null |   null  |
