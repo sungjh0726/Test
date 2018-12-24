@@ -17,7 +17,7 @@ Mysql에 DB작성 표준 지침을 기준해서 오라클의 Schema를 전환한
 12. VARCHAR2 는 varchar(45)로 통일한다. (Varchar2 becomes varchar(45))
 13. datetime 형식은 년, 월, 일, 시, 분, 초의 순서로 한다. (YYYY-MM-DD HH:MM:SS) # default current_timestamp
 14. data type이 varchar 일때는 defalut를 Null로 주고 data type이 숫자일때는 default를 0으로 준다. (When the data type is varchar, the default value is going to be ' Null', and when is integer, the default value is going to be zero.)
-15. Foreign key로 잡히는 column 명은 테이블 이름 자체로 지정한다. 
+15. Foreign key로 잡히는 column 명은 id로 한다. ()
 16. Nullable 유무는 주어진 그대로 따른다.
 17. job_id 는 job 으로 변환한다.
 18. email는 unique key로 걸어준다.
