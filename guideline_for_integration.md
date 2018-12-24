@@ -20,8 +20,8 @@ Mysql에 DB작성 표준 지침을 기준해서 오라클의 Schema를 전환한
 15. Foreign key로 잡히는 column 명은 테이블 이름 자체로 지정한다.
 16. Nullable 유무는 주어진 그대로 따른다.
 
-- create table Employee
-   |id   | column name  | data type | Nullable | Default |
+create table Employee
+|id   | column name  | data type | Nullable | Default |
    | --- |:-----------  |:--------- |:-------- |:------- |
    | 1   |  employee_id |    int    | Not null |    0    |
    | 2   |  first_name  |varchar(45)|   null   |   null  |
@@ -36,12 +36,12 @@ Mysql에 DB작성 표준 지침을 기준해서 오라클의 Schema를 전환한
    | 11  |  department  |    int    |   null   |    0    |
 
 
-| column name   | data type  | Cool  |
-| ------------- |:----------:| -----:|
+| column name   | data type  | Nullable|
+| ------------- |:----------:| -------:|
 |  employee_id  |    int     | $1600 |
-|  first_name   |      |   $12 |
-|  last_name    |    |    $1 |
-|    email      |      |    $1 |
+|  first_name   | varchar(45)|   $12 |
+|  last_name    | varchar(45)|    $1 |
+|    email      | varchar(45)|    $1 |
 
 DEPARTMENT_ID	NUMBER(4,0)	No		1
 DEPARTMENT_NAME	VARCHAR2(30 BYTE)	No		2
