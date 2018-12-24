@@ -36,11 +36,12 @@ Mysql에 DB작성 표준 지침을 기준해서 오라클의 Schema를 전환한
    | 11  |  department  |    int    |   null   |    0    |
 
 
-| column name   | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-|  employee_id  | right-aligned | $1600 |
-|  first_name   | centered      |   $12 |
-|  last_name    | are neat      |    $1 |
+| column name   | data type  | Cool  |
+| ------------- |:----------:| -----:|
+|  employee_id  |    int     | $1600 |
+|  first_name   |      |   $12 |
+|  last_name    |    |    $1 |
+|    email      |      |    $1 |
 
 DEPARTMENT_ID	NUMBER(4,0)	No		1
 DEPARTMENT_NAME	VARCHAR2(30 BYTE)	No		2
