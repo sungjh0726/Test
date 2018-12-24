@@ -52,3 +52,15 @@ Mysql에 DB작성 표준 지침을 기준해서 오라클의 Schema를 전환한
 |   job_title    | varchar(45)| Not null |  null  |
 |   min_salary   |     int    |   null   |    0   |
 |   max_salary   |     int    |   null   |    0   |
+
+
+- create table job history
+
+|   column name  | data type  | Nullable | Default|
+|:--------------:|:----------:|:--------:|:------:|
+|   employee_id  |     int    | Not null |  null  |
+|   start_date   | varchar(45)| Not null |  null  |
+|   min_salary   |     int    |   null   |    0   |
+|   max_salary   |     int    |   null   |    0   |
+
+
