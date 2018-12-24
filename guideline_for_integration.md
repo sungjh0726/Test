@@ -20,16 +20,7 @@ Mysql에 DB작성 표준 지침을 기준해서 오라클의 Schema를 전환한
 15. Foreign key로 잡히는 column 명은 테이블 이름 자체로 지정한다.
 16. Nullable 유무는 주어진 그대로 따른다.
 
-create table Employee
-
-   | 5   |     tel      |varchar(45)|   null   |   null  |
-   | 6   |  hire_date   |  datetime | Not null |    *    |
-   | 7   |     job      |varchar(45)| Not null |   null  |
-   | 8   |    salary    |    int    |   null   |    0    |
-   | 9   |commission_pct|    int    |   null   |    0    |
-   | 10  |  manager_id  |    int    |   null   |    0    |
-   | 11  |  department  |    int    |   null   |    0    |
-
+- create table Employee
 
 | column name  | data type  | Nullable | Default|
 |:------------:|:----------:|:--------:|:------:|
@@ -37,13 +28,24 @@ create table Employee
 |  first_name  | varchar(45)|   null   |  null  |
 |  last_name   | varchar(45)| Not null |  null  |
 |    email     | varchar(45)| Not null |  null  |
-|     tel      | varchar(45)|   null   |   null  |
-|  hire_date   |   datetime | Not null |    *    |
-|     job      | varchar(45)| Not null |   null  |
-|    salary    |     int    |   null   |    0    |
-|commission_pct|     int    |   null   |    0    |
-|  manager_id  |     int    |   null   |    0    |
-|  department  |     int    |   null   |    0    |
+|     tel      | varchar(45)|   null   |  null  |
+|  hire_date   |   datetime | Not null |   *    |
+|     job      | varchar(45)| Not null |  null  |
+|    salary    |     int    |   null   |   0    |
+|commission_pct|     int    |   null   |   0    |
+|  manager_id  |     int    |   null   |   0    |
+|  department  |     int    |   null   |   0    |
+
+- create table department
+
+|   column name  | data type  | Nullable | Default|
+|:--------------:|:----------:|:--------:|:------:|
+|department_id   |    int     | Not null |   0    |
+|department_name | varchar(45)| Not null |  null  |
+|  manager_id    |     int    |   null   |    0   |
+
+
+
 
 
 DEPARTMENT_ID	NUMBER(4,0)	No		1
