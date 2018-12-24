@@ -15,33 +15,26 @@ Mysql에 DB작성 표준 지침을 기준해서 오라클의 Schema를 전환한
 10. Foreign key는 f_column1 의 형식으로 만든다. 또한 Stored Routines 및 unique key를 만들때도 적용한다
 11. Number 는 int 로 통일한다.
 12. VARCHAR2 는 varchar(45)로 통일한다.
-11. Number 는 int 로 통일한다.
-13. datetime 형식은 년, 월, 일 의 순서로 한다 
+13. datetime 형식은 년, 월, 일, 시, 분, 초의 순서로 한다. (YYYY-MM-DD HH:MM:SS) # default current_timestamp
+14. data type이 varchar 일때는 defalut를 Null로 주고 data type이 숫자일때는 default를 0으로 준다.
+15. Foreign key로 잡히는 column 명은 테이블 이름 자체로 지정한다.
+16. Nullable 유무는 주어진 그대로 따른다.
 
 - create table Employee
    |id | column name  | data type | Nullable | Default |
-   | 1 |  employee_id |    int    |
-   | 2 |  first_name  |varchar(45)|
-   | 3 |  last_name   |varchar(45)|
-   | 4 |    email     |varchar(45)|
-   | 5 |  hire_date   |  datetime |
-   | 6 |   job_id     |
-   | 7 |    salary    |
-   | 8 |commission_pct|
-   | 9 |  manager_id  |
-   | 10|department_id |
+   | 1 |  employee_id |    int    | Not null |    0    |
+   | 2 |  first_name  |varchar(45)|   null   |   null  |
+   | 3 |  last_name   |varchar(45)| Not null |   null  |
+   | 4 |    email     |varchar(45)| Not null |   null  |
+   | 5 |     tel      |varchar(45)|   null   |   null  |
+   | 6 |  hire_date   |  datetime | Not null |    *    |
+   | 7 |     job      |varchar(45)| Not null |   null  |
+   | 8 |    salary    |    int    |   null   |    0    |
+   | 9 |commission_pct|    int    |   null   |    0    |
+   | 10|  manager_id  |    int    |   null   |    0    |
+   | 11|  department  |    int    |   null   |    0    |
 
-EMPLOYEE_ID	NUMBER(6,0)	No		1
-FIRST_NAME	VARCHAR2(20 BYTE)	Yes		2
-LAST_NAME	VARCHAR2(25 BYTE)	No		3
-EMAIL	VARCHAR2(25 BYTE)	No		4
-PHONE_NUMBER	VARCHAR2(20 BYTE)	Yes		5
-HIRE_DATE	DATE	No		6
-JOB_ID	VARCHAR2(10 BYTE)	No		7
-SALARY	NUMBER(8,2)	Yes		8
-COMMISSION_PCT	NUMBER(2,2)	Yes		9
-MANAGER_ID	NUMBER(6,0)	Yes		10
-DEPARTMENT_ID	NUMBER(4,0)	Yes		11
+
 
 DEPARTMENT_ID	NUMBER(4,0)	No		1
 DEPARTMENT_NAME	VARCHAR2(30 BYTE)	No		2
