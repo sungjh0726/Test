@@ -1,8 +1,28 @@
 ## 데이터 표준지침 for oracle HR Schema
 
-1. 이미 사용되고 있는 관용어는 계속 사용한다.
-2. 
+1. 이미 사용되고 있는 관용어는 계속 사용한다. (keeping Idiomatic words used in advanced)
+2. Synonym은 허용하지 않는다. (Using Synonym not allowed)
+3. 띄어쓰기는 _ 로 지정한다. (Space between words must be indicated by '_')
+4. 한글명이 있을경우 영문으로 번역하여 표기한다. (Translate other language into English)
+5. 테이블 명은 앞이 대문자인 카멜케이스를 쓴다. (Labeling tables must use Camelcase)
+6. 컬럼명은 소문자만 쓴다. (Labeling columns must use lowercases only)
+7. id 를 primary key로 잡는다. (Assign id as a primary key and auto-increment) 
+8. Employee table 형식
+   column name | data type | Nullable |
 
+EMPLOYEE_ID	NUMBER(6,0)	No		1
+FIRST_NAME	VARCHAR2(20 BYTE)	Yes		2
+LAST_NAME	VARCHAR2(25 BYTE)	No		3
+EMAIL	VARCHAR2(25 BYTE)	No		4
+PHONE_NUMBER	VARCHAR2(20 BYTE)	Yes		5
+HIRE_DATE	DATE	No		6
+JOB_ID	VARCHAR2(10 BYTE)	No		7
+SALARY	NUMBER(8,2)	Yes		8
+COMMISSION_PCT	NUMBER(2,2)	Yes		9
+MANAGER_ID	NUMBER(6,0)	Yes		10
+DEPARTMENT_ID	NUMBER(4,0)	Yes		11
 
-표준화 원칙 정의서  (표준성 일반성 대표성 )
- 1. 당사에서 사용하고 있는 관용화된 용어는 우선하여 사용한다. 2. 이음동의어, 동음이의어는 허용하지 않는다. 3. 워드는 다른 워드와의 조합이 아닌 단일 워드로 정의한다. 4. 접두사, 접미사를 하나의 개별 워드로 처리한다.  5. 한글명에는‘_’,-‘,’?‘의 특수 문자나 띄어쓰기를 허용하지 않는다.  6. 한글명에 있어 한글과 영문자를 혼용하여 사용할 수 없으며, 외래어는 한글로 표시해야 한다.  7. 영문 정식 명칭(full name)을 영문명으로, 영문 약식명을 영문 약어명으로 정의하여 명명 규칙 을 통일한다.  8. 영문 약어명은 통용되는 약어가 있다면 그대로 표현한다.  9. 영문 약어명은 어두 이 모음을 제외한 4자리 이내로 정의한다. 단, 자음이 중복되는 경우 중 복 음 중 하나만 사용한다.  10. 영문 약어명은 영문 정식 명칭(full name)이 5자리 이상, 앞 음절 4자 이외의 음절이 모음으로 구성되는 경우 앞 음절 4자를 그대로 표현한다.  11. and(or)로 연결된 단어의 경우는 각각의 첫 글자를 사용한다.  
+DEPARTMENT_ID	NUMBER(4,0)	No		1
+DEPARTMENT_NAME	VARCHAR2(30 BYTE)	No		2
+MANAGER_ID	NUMBER(6,0)	Yes		3
+LOCATION_ID	NUMBER(4,0)	Yes		4
