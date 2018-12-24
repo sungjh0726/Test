@@ -8,7 +8,8 @@
 6. 컬럼명은 소문자만 쓴다. (Labeling columns must use lowercases only)
 7. id 를 primary key로 잡는다. (Assign id as a primary key and auto-increment) 
 8. Employee table 형식
-   column name | data type | Nullable |
+   |id |column name | data type | Nullable | Default |
+   ----------------------------------------------------
 
 EMPLOYEE_ID	NUMBER(6,0)	No		1
 FIRST_NAME	VARCHAR2(20 BYTE)	Yes		2
