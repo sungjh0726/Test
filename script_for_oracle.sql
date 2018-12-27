@@ -1,8 +1,4 @@
 drop table if exists Job;
-drop table if exists Department;
-drop table if exists Employee;
-drop table if exists JobHistory;
-
 create table Job (
    id varchar(45) not null,
    title varchar(45) not null,
@@ -11,6 +7,7 @@ create table Job (
    primary key(id)
 );
 
+drop table if exists Department;
 create table Department (
    id int default 0 not null,
    name varchar(45) not null,
@@ -18,6 +15,7 @@ create table Department (
    primary key(id)
 );
 
+drop table if exists Employee;
 create table Employee (
    id int default 0 not null,
    first_name varchar(45),
@@ -37,6 +35,7 @@ create table Employee (
    constraint f_department_id foreign key (department) references Department(id)
 );
 
+drop table if exists JobHistory;
 create table JobHistory (
    employee int not null,
    start_date datetime not null,
