@@ -17,14 +17,12 @@ def get_mysql_conn(_db):
 
 def compare_rowcount():
     print("-- oracle row count =  ", oracle_rows, "-- mysql row count =  ", mysql_rows) 
-
     if oracle_rows == mysql_rows:
         print("The migration has been successful")
     else:
         print("The migration has been unsuccessful")
 
 def compare_sample():
-
     if list_mysrow == list_orarow:
         print("MySQL sample count = ", len(list_mysrow), "Oracle sample count = ", len(list_orarow))
     else:
@@ -58,7 +56,6 @@ cur.close()
 
 
 list_orarow = [] 
-
 cur = conn_oracle_doodb.cursor()
 for i in range(5):
     sql = "select JOB_ID, JOB_TITLE, MIN_SALARY, MAX_SALARY from JOBS where JOB_ID = :1"
