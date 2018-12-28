@@ -1,4 +1,4 @@
--- 1. JOBS to Job table
+-- importing modules and declaring functions
 
 import pymysql
 import cx_Oracle
@@ -14,6 +14,9 @@ def get_mysql_conn(_db):
     port=3307,
     db=_db,
     charset='utf8')
+
+
+-- 1. JOBS to Job table
     
 connection = mu.get_oracle_conn()
 myconn = mu.get_mysql_conn('doodb')
@@ -85,6 +88,56 @@ with myconn:
     cur.execute(sql_create)
 
     sql_insert = "insert into Department(id, name, manager_id) values(%s, %s, %s)"
+    
+    cur.executemany(sql_insert, rows)
+    print("Affected Row Count is", cur.rowcount)
+    
+    
+-- 3. EMPLOYEES to Employee
+
+connection = mu.get_oracle_conn()
+myconn = mu.get_mysql_conn('doodb')
+
+with connection:
+    
+    cursor = connection.cursor()
+    sql = '''select EMPLOYEE_ID, FIRST_NAME, LAST_NAME, EMAIL, PHONE_NUMBER, HIRE_DATE,
+                    JOB_ID, SALARY, COMMISSION_PCT, MANAGER_ID, DEPARTMENT_ID from EMPLOYEES'''
+    cursor.execute(sql)
+    rows = cursor.fetchall()
+
+for row in rows:
+    print(row)
+
+with myconn:
+    cur =  myconn.cursor()
+    cur.execute("call sp_drop_fk_refs('Employee')")
+    
+    cur.execute("drop table if exists Employee")
+
+    sql_create = '''
+        create table Employee (
+            id int default 0 not null,
+            first_name varchar(45),
+            last_name varchar(45) not null,
+            email varchar(45) not null,
+            tel varchar(45),
+            hire_date datetime not null default current_timestamp,
+            job varchar(45) not null default ' ',
+            salary int default 0,
+            commission_pct int default 0,
+            manager_id int default 0,
+            department int default 0,
+            primary key(id)
+        )
+    '''
+
+    cur.execute(sql_create)
+
+    sql_insert = '''insert into Employee(id, first_name, last_name, email, tel, hire_date,
+                                         job, salary, commission_pct, manager_id, department) 
+                    values(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)'''
+
     
     cur.executemany(sql_insert, rows)
     print("Affected Row Count is", cur.rowcount)
