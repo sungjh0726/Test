@@ -50,3 +50,41 @@ with myconn:
     
     cur.executemany(sql_insert, rows)
     print("Affected Row Count is", cur.rowcount)
+
+
+-- 2. DEPARTMENTS to Department
+
+connection = mu.get_oracle_conn()
+myconn = mu.get_mysql_conn('doodb')
+
+with connection:
+    
+    cursor = connection.cursor()
+    sql = '''select DEPARTMENT_ID, DEPARTMENT_NAME, MANAGER_ID from DEPARTMENTS'''
+    cursor.execute(sql)
+    rows = cursor.fetchall()
+
+for row in rows:
+    print(row)
+
+with myconn:
+    cur =  myconn.cursor()
+    cur.execute("call sp_drop_fk_refs('Department')")
+    
+    cur.execute("drop table if exists Department")
+
+    sql_create = '''
+        create table Department (
+            id int default 0 not null,
+            name varchar(45) not null,
+            manager_id int default 0,
+            primary key(id)
+        )
+    '''
+
+    cur.execute(sql_create)
+
+    sql_insert = "insert into Department(id, name, manager_id) values(%s, %s, %s)"
+    
+    cur.executemany(sql_insert, rows)
+    print("Affected Row Count is", cur.rowcount)
