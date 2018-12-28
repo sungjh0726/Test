@@ -70,6 +70,7 @@ cur.close()
 compare_rowcount()
 compare_sample()
                       
+                      
 -- 2. Verification for Department table
                       
 import pymysql
@@ -150,3 +151,8 @@ cur.close()
 
 compare_rowcount()
 compare_sample()
+                      
+-- 3. Verification for table Employee
+-- 4. Verification for table JobHistory
+                      
+                      
