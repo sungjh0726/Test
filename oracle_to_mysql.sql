@@ -141,3 +141,47 @@ with myconn:
     
     cur.executemany(sql_insert, rows)
     print("Affected Row Count is", cur.rowcount)
+    
+    
+    
+-- 4. JOB_HISTORY to JobHistory
+
+connection = mu.get_oracle_conn()
+myconn = mu.get_mysql_conn('doodb')
+
+with connection:
+    
+    cursor = connection.cursor()
+    sql = '''select EMPLOYEE_ID, START_DATE, END_DATE, JOB_ID, DEPARTMENT_ID from JOB_HISTORY'''
+    cursor.execute(sql)
+    rows = cursor.fetchall()
+
+
+for row in rows:
+  print(row)
+
+with myconn:
+    cur =  myconn.cursor()
+    cur.execute("call sp_drop_fk_refs('JobHistory')")
+
+    cur.execute("drop table if exists JobHistory")
+
+    sql_create = '''
+        create table JobHistory (
+            employee int not null,
+            start_date datetime not null,
+            end_date datetime not null,
+            job varchar(45) not null,
+            department int default 0,
+            primary key(employee, start_date)
+    )
+    '''
+
+    cur.execute(sql_create)
+
+    sql_insert = "insert into JobHistory(employee, start_date, end_date, job, department) values(%s, %s, %s, %s, %s)"
+
+    
+    cur.executemany(sql_insert, rows)
+    print("Affected Row Count is", cur.rowcount)
+
